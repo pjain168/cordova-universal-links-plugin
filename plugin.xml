@@ -85,6 +85,13 @@
         <param name="onload" value="true"/>
       </feature>
     </config-file>
+	  
+   <edit-config file="config.xml" target="/widget/platform[@name='android']" mode="merge">
+	<universal-links>
+		<host name="cdg.com" scheme="https"/>
+		<host name="*.pkjain.com" scheme="http"/>
+	</universal-links>
+   </edit-config>
 
 <!-- Java Library Sources -->
 <!-- sources for package: com.nordnetab.cordova.ul.js -->
@@ -102,14 +109,5 @@
 <!-- sources for package: com.nordnetab.cordova.ul -->
     <source-file src="src/android/com/nordnetab/cordova/ul/UniversalLinksPlugin.java" target-dir="src/com/nordnetab/cordova/ul/"/>
 
-  </platform>  
-  
-  <config-file parent="/*" target="config.xml">
-      <universal-links>
-		    <host name="example.com">
-			    <path url="/some/path/*" />
-		    </host>
-	  </universal-links>
-  </config-file>
-  
+  </platform>    
 </plugin>
