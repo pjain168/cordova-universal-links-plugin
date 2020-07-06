@@ -86,7 +86,7 @@
       </feature>
     </config-file>
 	  
-   <edit-config file="config.xml" target="/widget/platform[@name='android']" mode="overwrite">
+   <edit-config file="config.xml" target="/widget/platform[@name='android']/universal-links" mode="merge">
 	<universal-links>
 		<host name="cdg.com" scheme="https"/>
 		<host name="*.pkjain.com" scheme="http"/>
